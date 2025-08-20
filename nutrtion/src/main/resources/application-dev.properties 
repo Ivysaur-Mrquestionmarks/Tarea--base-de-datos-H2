@@ -1,7 +1,7 @@
 # Configuración de base de datos H2 en memoria
 spring.datasource.url=jdbc:h2:mem:nutrition
 spring.datasource.username=sa
-spring.datasource.password=
+spring.datasource.password=test
 
 # Configuración de Hibernate
 spring.jpa.hibernate.ddl-auto=create-drop
