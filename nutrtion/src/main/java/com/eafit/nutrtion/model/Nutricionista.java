@@ -34,6 +34,15 @@ public class Nutricionista {
     private boolean activo = true;
     
     // Relaciones (se definen más adelante)
+    // Relación LAZY (carga perezosa) con Pacientes
+    @OneToMany(mappedBy = "nutricionista", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Paciente> pacientes = new ArrayList<>();
+
+    // Método helper para añadir pacientes
+    public void addPaciente(Paciente paciente) {
+        pacientes.add(paciente);
+        paciente.setNutricionista(this);
+    }    
     
     // Constructor vacío requerido por JPA
     public Nutricionista() {
@@ -46,7 +55,6 @@ public class Nutricionista {
         this.numeroLicencia = numeroLicencia;
         this.email = email;
     }
-
     // Getters y setters (omitidos por brevedad)
 }
 

@@ -30,6 +30,9 @@ public class Paciente {
     private boolean activo = true;
     
     // Relación con Nutricionista (se define más adelante)
-    
+    // Relación EAGER (carga inmediata) con Nutricionista
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "nutricionista_id", nullable = false)
+    private Nutricionista nutricionista;    
     // Constructores, getters y setters (omitidos por brevedad)
 }
