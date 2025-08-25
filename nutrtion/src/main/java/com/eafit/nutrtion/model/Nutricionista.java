@@ -38,6 +38,17 @@ public class Nutricionista {
     @OneToMany(mappedBy = "nutricionista", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Paciente> pacientes = new ArrayList<>();
 
+
+    // Relación EAGER (carga inmediata) con Notas
+@OneToMany(mappedBy = "nutricionista", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+private List<Nota> notas = new ArrayList<>();
+
+// Método helper para añadir notas
+public void addNota(Nota nota) {
+    notas.add(nota);
+    nota.setNutricionista(this);
+}
+
     // Método helper para añadir pacientes
     public void addPaciente(Paciente paciente) {
         pacientes.add(paciente);

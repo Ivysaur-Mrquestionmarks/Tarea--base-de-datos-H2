@@ -33,6 +33,16 @@ public class Paciente {
     // Relación EAGER (carga inmediata) con Nutricionista
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "nutricionista_id", nullable = false)
-    private Nutricionista nutricionista;    
+    private Nutricionista nutricionista;  
+
+    @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+private List<Nota> notas = new ArrayList<>();
+
+// Método helper para añadir notas
+public void addNota(Nota nota) {
+    notas.add(nota);
+    nota.setPaciente(this);
+}
+  
     // Constructores, getters y setters (omitidos por brevedad)
 }
