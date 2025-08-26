@@ -34,3 +34,5 @@ public class Nota {
     private Nutricionista nutricionista;
 
     // Constructores, getters y setters (omitidos por brevedad)
+
+}
