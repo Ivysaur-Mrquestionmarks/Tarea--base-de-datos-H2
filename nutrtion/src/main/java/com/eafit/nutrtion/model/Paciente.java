@@ -2,6 +2,8 @@ package com.eafit.nutrtion.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "paciente")
@@ -43,6 +45,6 @@ public void addNota(Nota nota) {
     notas.add(nota);
     nota.setPaciente(this);
 }
-  
+
     // Constructores, getters y setters (omitidos por brevedad)
 }

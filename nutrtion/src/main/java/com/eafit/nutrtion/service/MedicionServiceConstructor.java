@@ -1,6 +1,8 @@
 package com.eafit.nutrtion.service;
 
 import com.eafit.nutrtion.model.Medicion;
+import com.eafit.nutrtion.model.Nutricionista;
+import com.eafit.nutrtion.model.Paciente;
 import com.eafit.nutrtion.repository.MedicionRepository;
 import com.eafit.nutrtion.repository.PacienteRepository;
 import com.eafit.nutrtion.repository.NutricionistaRepository;

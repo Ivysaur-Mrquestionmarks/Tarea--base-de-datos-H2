@@ -12,7 +12,7 @@ public class Nutricionista {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-  @NotBlank(message = "El nombre es obligatorio")
+    @NotBlank(message = "El nombre es obligatorio")
     @Size(min = 2, max = 100, message = "El nombre debe tener entre 2 y 100 caracteres")
     @Column(name = "nombre", nullable = false, length = 100)
     private String nombre;

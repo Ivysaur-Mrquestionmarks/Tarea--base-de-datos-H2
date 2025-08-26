@@ -7,6 +7,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.eafit.nutrtion.model.Nutricionista;
+import com.eafit.nutrtion.model.Paciente;
+
 @Entity
 @Table(name = "medicion")
 public class Medicion {
