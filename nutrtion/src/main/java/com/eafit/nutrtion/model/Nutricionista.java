@@ -3,6 +3,8 @@ package com.eafit.nutrtion.model;
 import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import jakarta.validation.constraints.*;
+
 
 @Entity
 @Table(name = "nutricionista")
